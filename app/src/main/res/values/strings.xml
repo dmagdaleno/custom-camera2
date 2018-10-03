@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">custom-camera2</string>
+    <string name="capture">Capturar</string>
+</resources>
