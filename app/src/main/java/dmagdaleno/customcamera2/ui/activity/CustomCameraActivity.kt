@@ -67,6 +67,7 @@ class CustomCameraActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custom_camera)
 
@@ -230,6 +231,7 @@ class CustomCameraActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        Log.d(TAG, "onRequestPermissionsResult")
         when(requestCode) {
             RequestCode.CAMERA -> {
                 if(grantResults.first() == PackageManager.PERMISSION_DENIED) {
@@ -241,6 +243,7 @@ class CustomCameraActivity : AppCompatActivity() {
     }
 
     override fun onResume() {
+        Log.d(TAG, "onResume")
         super.onResume()
         startBackgroundThread()
         if(texture.isAvailable)
@@ -250,6 +253,7 @@ class CustomCameraActivity : AppCompatActivity() {
     }
 
     override fun onPause() {
+        Log.d(TAG, "onPause")
         stopBackgroundThread()
         super.onPause()
     }
